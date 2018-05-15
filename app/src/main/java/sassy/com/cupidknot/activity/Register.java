@@ -1,7 +1,9 @@
-package sassy.com.cupidknot;
+package sassy.com.cupidknot.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import sassy.com.cupidknot.R;
 
 public class Register extends AppCompatActivity {
 
