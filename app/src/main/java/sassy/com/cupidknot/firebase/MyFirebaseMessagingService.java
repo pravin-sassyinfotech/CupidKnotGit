@@ -1,3 +1,4 @@
+/*
 
 
 package sassy.com.cupidknot.firebase;
@@ -29,11 +30,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "MyFirebaseMsgService";
 
 
-    /**
+    */
+/**
      * Called when message is received.
      *
      * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
-     */
+     *//*
+
     // [START receive_message]
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -71,11 +74,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
     // [END receive_message]
 
-    /**
+    */
+/**
      * Create and show a simple notification containing the received FCM message.
      *
      * @param messageBody FCM message body received.
-     */
+     *//*
+
     private void sendNotification(String messageBody) {
         try {
             Intent intent = null;
@@ -85,7 +90,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             // intent.putExtra(Keys.badgecount,badgecount);
             intent = new Intent(Application.getInstance(),MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 */
+/* Request code *//*
+, intent,
                     PendingIntent.FLAG_ONE_SHOT);
 
             Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
@@ -136,3 +143,4 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
 }
+*/

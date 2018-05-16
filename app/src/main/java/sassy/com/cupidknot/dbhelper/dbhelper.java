@@ -7,12 +7,13 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.nova.systemmonitor.utils.Consts;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import sassy.com.cupidknot.extras.Keys;
 
 
 public class dbhelper extends SQLiteOpenHelper {
@@ -48,7 +49,7 @@ public class dbhelper extends SQLiteOpenHelper {
         dbhelper.context =context;
     }
     public dbhelper(Context context, int version) {
-        super(context, dbname, null, Consts.DBVERSION);
+        super(context, dbname, null, Keys.DBVERSION);
         dbhelper.context =context;
         // TODO Auto-generated constructor stub
     }
@@ -57,7 +58,7 @@ public class dbhelper extends SQLiteOpenHelper {
         if (db == null) {
             //int v=sd.getVersion();
 
-            db = new dbhelper(context,Consts.DBVERSION);
+            db = new dbhelper(context, Keys.DBVERSION);
             sd = db.getWritableDatabase();
 
             return db;
